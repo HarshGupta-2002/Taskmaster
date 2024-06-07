@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskmaster</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container" id="container">
+        
+        <div class="element" id="title">
+            <div class="heading"><img src="assets/logo.svg" id="image">
+                <h1>Taskmaster</h1>
+            </div>
+            <div class="subheading">A simple to-do list web app to save and manage tasks</div>
+        </div>
+
+        <div class="element" id="input">
+            <div class="task">
+                <input type="text" class="enter" id="taskname" placeholder="Add Task">
+                <input type="date" class="enter" id="taskdate" placeholder="Enter date">
+                <button class="actions" id="addtask">+</button>
+            </div>
+            <textarea class="enter" id="description" placeholder="Description" style="width: 100%; padding: 7px 7px;"></textarea> 
+        </div>
+
+        <div class="element" id="buttons">
+            <button class="actions" id="filter">Filter</button>
+            <div class="dropdown" id="dropdown">
+                <a href="#" data-status="all">All</a>
+                <a href="#" data-status="pending">Pending</a>
+                <a href="#" data-status="completed">Completed</a>
+            </div>
+            <button class="actions" id="deleteAll">Delete All</button>
+        </div>
+
+        <div class="element" id="task-list">
+            <table>
+                <thead>
+                    <tr class="values" id="table-headers">
+                        <th id="border-left">Task</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                        <th id="border-right">Actions</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="tbody">
+                </tbody>
+            
+            </table>
+        </div>
+
+    </div>
+
+    <div class="watermark">
+        <img src="assets/Watermark.svg">
+    </div>
+</body>
+</html>

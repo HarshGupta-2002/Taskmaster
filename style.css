@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --color-primary: #5a78ff;
+    --color-secondary: #0957ff;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.notification {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 10px;
+    z-index: 1;
+    padding: 1vh;
+    width: 95%;
+    border-radius: 10px;
+    color: white;
+}
+#red {
+    background-color: red;
+}
+#green {
+    background-color: rgb(62, 236, 62);
+}
+
+/* CSS for the main box containing all containers */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto 400px;
+    min-width: 640px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px;
+}
+
+
+/* CSs for all containers */
+.element {
+    display: flex;
+    margin: 1vh 1vh;
+    width: -webkit-fill-available;
+}
+
+
+/* CSs related to the heading and logo */
+#title {
+    display: flex;
+    flex-direction: column;
+    margin: 1vh 1vh;
+    background-color: white;
+}
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading #image {
+    height: 10vh;
+}
+.subheading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* CSS related to all input fiels */
+#input {
+    display: flex;
+    flex-direction: column;
+}
+.task {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1vh;
+}
+#taskname, #taskdate {
+    padding-left: 7px;
+    width: 45%;
+}
+#addtask {
+    padding: 4px;
+    width: 7.5%;
+    font-size: 20px;
+}
+.enter {
+    border: 1.75px solid;
+    box-shadow: none;
+    border-radius: 7px;
+    outline: none;
+}
+.enter:focus {
+    border-color: orange;
+}
+
+/* CSS related to all buttons */
+#buttons {
+    display: flex;
+    justify-content: space-around;
+}
+.actions {
+    padding: 4px;
+    width: 17%;
+    height: auto;
+    font-size: 16px;
+    border-radius: 7px;
+    border-style: none;
+    font-weight: 450;
+    cursor: pointer;
+    background-color: #e02ba1;
+    color: white;
+}
+#filter {
+    width: 17%;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* CSS related to displaying outputs */
+#task-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+table {
+    width: -webkit-fill-available;
+    border-collapse: collapse;
+}
+th{
+    width: 25%;
+    text-align: left;
+    padding: 1vh 2vh;
+    background-color: silver;
+    font-weight: 550;
+    /* border: 3px solid black; */
+}
+td {
+    padding: 1vh 2vh 0 2vh;
+}
+.descriptioncell {
+    /* background-color: greenyellow; */
+    padding: 0 2vh 1vh 2vh;
+    font-weight: 250;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+#border-left {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+#border-right {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+#none {
+    text-align: center;
+    vertical-align: middle;
+}
+.completeButton {
+    font-size: 17.5px;
+    height: 30px;
+    width: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(52, 195, 52);
+}
+.deleteButton {
+    font-size: 17.5px;
+    height: 30px;
+    width: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+}
+
+.watermark {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+.watermark img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Adding media queries */
+@media only screen and (max-width: 430px) {
+    .container {
+        min-width: 420px
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .container {
+        min-width: 370px
+    }
+    #filter {
+        width: fit-content;
+    }
+    * {
+        size: 12px;
+    }
+    td {
+        padding: 0.5vh 2vh;
+    }
+}
