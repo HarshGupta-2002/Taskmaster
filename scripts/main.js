@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 cell0.innerHTML = `<div class="taskContainer">${task.taskname} <div class="taskDescription">${task.description == "" ? "No Description" : task.description}</div></div>`;
                 cell1.innerHTML = task.taskdate;
                 cell2.innerHTML = task.status;
-                cell3.innerHTML = `<button class="crud completeButton" data-index="${index}"><i class="fa-solid fa-check"></i></button>
-                                    <button class="crud deleteButton" data-index="${index}"><i class="fa-solid fa-trash"></i></button>`;
+                cell3.innerHTML = `<div class="crudBtnContainer"><button class="crud completeButton" data-index="${index}"><i class="fa-solid fa-check"></i></button>
+                                    <button class="crud deleteButton" data-index="${index}"><i class="fa-solid fa-trash"></i></button></div>`;
             });
         }
         attachDeleteEventListeners();
