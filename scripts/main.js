@@ -29,22 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 var cell3 = newrow.insertCell(3);
                 cell3.className = "crud";
 
-                var descriptionrow = tbody.insertRow(1);
-                var descriptioncell = descriptionrow.insertCell(0);
-                descriptioncell.className = "descriptioncell";
-                descriptioncell.colSpan = 4;
-
-                cell0.innerHTML = task.taskname;
+                cell0.innerHTML = `<div class="taskContainer">${task.taskname} <div class="taskDescription">${task.description == "" ? "No Description" : task.description}</div></div>`;
                 cell1.innerHTML = task.taskdate;
                 cell2.innerHTML = task.status;
                 cell3.innerHTML = `<button class="crud completeButton" data-index="${index}"><i class="fa-solid fa-check"></i></button>
                                     <button class="crud deleteButton" data-index="${index}"><i class="fa-solid fa-trash"></i></button>`;
-
-                if (task.description == "") {
-                    descriptioncell.innerHTML = "No Description";
-                } else {
-                    descriptioncell.innerHTML = task.description;
-                }
             });
         }
         attachDeleteEventListeners();
