@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 cell0.innerHTML = task.taskname;
                 cell1.innerHTML = task.taskdate;
                 cell2.innerHTML = task.status;
-                cell3.innerHTML = `<button class="crud completeButton" data-index="${index}"><i class="fa-solid fa-check"></i></button>
-                                    <button class="crud deleteButton" data-index="${index}"><i class="fa-solid fa-trash"></i></button>`;
+                cell3.innerHTML = `<div class="crudBtnContainer"><button class="crud completeButton" data-index="${index}"><i class="fa-solid fa-check"></i></button>
+                                <button class="crud deleteButton" data-index="${index}"><i class="fa-solid fa-trash"></i></button></div>`;
 
                 if (task.description == "") {
                     descriptioncell.innerHTML = "No Description";

@@ -7,13 +7,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
-:root {
-    --color-primary: #5a78ff;
-    --color-secondary: #0957ff;
-}
-
 body {
-    position: relative;
+    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +40,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: auto 400px;
+    margin-top: auto;
+    margin-bottom: auto;
     min-width: 640px;
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.3);
@@ -57,7 +53,7 @@ body {
 }
 
 
-/* CSs for all containers */
+/* CSS for all containers */
 .element {
     display: flex;
     margin: 1vh 1vh;
@@ -115,6 +111,9 @@ body {
 .enter:focus {
     border-color: orange;
 }
+#description {
+    resize: none;
+}
 
 /* CSS related to all buttons */
 #buttons {
@@ -161,7 +160,7 @@ body {
     justify-content: space-between;
 }
 table {
-    width: -webkit-fill-available;
+    width: 100%;
     border-collapse: collapse;
 }
 th{
@@ -170,18 +169,19 @@ th{
     padding: 1vh 2vh;
     background-color: silver;
     font-weight: 550;
-    /* border: 3px solid black; */
 }
 td {
     padding: 1vh 2vh 0 2vh;
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
 .descriptioncell {
-    /* background-color: greenyellow; */
     padding: 0 2vh 1vh 2vh;
     font-weight: 250;
     overflow-wrap: break-word;
     word-break: break-all;
 }
+
 #border-left {
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
@@ -194,19 +194,20 @@ td {
     text-align: center;
     vertical-align: middle;
 }
+.crudBtnContainer{
+    display: flex;
+    justify-content: space-around;
+}
 .completeButton {
     font-size: 17.5px;
-    height: 30px;
-    width: 30px;
     background: none;
     border: none;
     cursor: pointer;
     color: rgb(52, 195, 52);
+    margin-right: 20px;
 }
 .deleteButton {
     font-size: 17.5px;
-    height: 30px;
-    width: 30px;
     background: none;
     border: none;
     cursor: pointer;
@@ -229,23 +230,42 @@ td {
 
 
 /* Adding media queries */
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 650px) {
     .container {
-        min-width: 420px
+        min-width: 80vw;
+        margin: auto 7px;
     }
-}
-
-@media only screen and (max-width: 375px) {
-    .container {
-        min-width: 370px
+    #task-list{
+        width: 100%;
+    }
+    table{
+        font-size: 12px;
+    }
+    #border-right {
+        width: fit-content;
     }
     #filter {
         width: fit-content;
     }
-    * {
-        size: 12px;
+    #deleteAll {
+        width: fit-content;
     }
-    td {
-        padding: 0.5vh 2vh;
+}
+
+@media only screen and (max-width: 500px) {
+    #taskname, #taskdate {
+        padding-left: 7px;
+        width: 40%;
+    }
+    #addtask {
+        padding: 4px;
+        width: 13%;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        min-width: 90vw
     }
 }
