@@ -7,9 +7,24 @@
     <link rel="icon" type="image/x-icon" href="assets/logo.svg">
     <link rel="stylesheet" href="style.css">
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/theme.js" defer></script>
+
+    <!-- Font awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
+
+    <div class="theme-icon" id="theme-icon">
+        <i class="fa-solid fa-palette" class="theme-button"></i>
+        <div class="dropdown" id="theme-dropdown">
+            <a href="#" data-status="Bumblebee">Bumblebee</a>
+            <a href="#" data-status="Dark">Dark</a>
+            <a href="#" data-status="Light">Light</a>
+            <a href="#" data-status="Halloween">Halloween</a>
+            <a href="#" data-status="Cupcake">Cupcake</a>
+        </div>
+    </div>
 
     <div class="container" id="container">
         
@@ -61,5 +76,6 @@
     <div class="watermark">
         <img src="assets/Watermark.svg">
     </div>
+
 </body>
 </html>
